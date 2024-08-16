@@ -36,7 +36,7 @@ if [ "$code" -ne "200" ] ; then
         exit $code
 fi
 
-function generate_hosts {
+generate_hosts() {
 	sed "s/^./$1 /"  $tempfile >> $output
 	sed "s/^/$1 www/" $tempfile >> $output
 }
